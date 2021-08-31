@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun renderItemList(state: ItemListViewState) {
-
+        supportActionBar?.title = state.toolbarTitle
+        adapter.update(state.items)
     }
 
     private fun bindViews() {
